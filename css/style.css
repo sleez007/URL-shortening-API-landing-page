@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 :root{
     --gray: hsl(0, 0%, 75%);
@@ -8,7 +8,9 @@
     --cyan: hsl(180, 66%, 49%);
     --dark-violet: hsl(257, 27%, 26%);
     --white: #fff;
+    --bg: #F0F1F6;
 
+    --bold-weight: 700;
     --medium-weight: 500;
     --regular-weight: 400;
     --family-font: 'Poppins', sans-serif;
@@ -23,12 +25,15 @@
 
 body{
     font-family: var(--family-font);
-   
+    color: var(--gray);
 }
 
 h1, h2, h3{
-    font-weight: var(--medium-weight);
+    font-weight: var(--bold-weight);
     color: var(--very-dark-violet);
+}
+h1{
+    font-size: 3.3rem;
 }
 
 /* Utility classes */
@@ -50,6 +55,21 @@ h1, h2, h3{
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
 }
+.grid-3{
+    grid-template-columns: repeat(3, minmax(10em, 1fr));
+    gap: 2em;
+}
+
+.btn{
+    border-radius: 1.2em;
+    padding: .3em .8em;
+}
+
+.btn--cyan{
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
 
 .container{
     width: 100%;
@@ -66,8 +86,13 @@ h1, h2, h3{
 
 /* Navigation Bar */
 header{
-   padding-top: 1.5em;
+   padding-top: 1.0em;
    padding-bottom: 1.5em;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+   background-color: var(--white);
 }
 
 .nav{
@@ -95,12 +120,7 @@ header{
     margin-left: auto;
 }
 
-.nav__menu-list > li:nth-child(5) > a{
-    padding: .3em .8em;
-    background-color: var(--cyan);
-    border-radius: 1.2em;
-   
-}
+
 
 .nav__menu-list > li:nth-child(5) > a{
     color:var(--white);
@@ -115,5 +135,87 @@ header{
 
 .toggle_menu{
     display: none;
+}
+
+
+/* HERO SECTION DESIGN */
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    max-height: 800px;
+    position: relative;
+    
+}
+.hero__detail > h1{
+    line-height: 1.2;
+}
+.hero__detail > p{
+    max-width: 70%;
+    margin-top: 0.8em;
+    margin-bottom: 2.2em;
+}
+
+
+.search-box{
+    position: absolute;
+    bottom: -100px ;
+    height: 200px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-violet);
+    border-radius: .5em;
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-size: cover;
+    background-position:right bottom ;
+    background-repeat: no-repeat;
+}
+
+.search-box > .grid-2{
+    grid-template-columns: 3.5fr 1fr;
+}
+.search-box > .grid-2 input{
+    width: 100%;
+    height: 3em;
+    border: none;
+    border-radius: .5em;
+    padding: .2em .7em;
+}
+
+.search-box > .grid-2 .btn{
+    border-radius: .4em;
+    padding: .5em .8em;
+}
+
+
+/* STATISTICS STYLING */
+.statistics{
+    background-color: var(--bg);
+}
+
+.adv{
+    padding: 13em 0;
+}
+
+.adv p{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card-wrapper{
+    padding-bottom: 8em;
+}
+.card{
+    height: 200px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: .8em;
+}
+
+.card:nth-child(2){
+    margin-top: 4em;
+}
+.card:nth-child(3){
+    margin-top: 8em;
 }
 

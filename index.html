@@ -11,16 +11,11 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsive.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 <body>
     <!-- NAVIGATION MENU -->
-    <header class="container">
-        <nav class="nav flex">
+    <header>
+        <nav class="nav flex container">
             <a href="#" class="nav__logo">
                 <img src="./images/logo.svg" alt="">
             </a>
@@ -32,7 +27,7 @@
                     <li><a href="#">Resources</a></li>
 
                     <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#" class="btn btn--cyan">Sign Up</a></li>
 
                 </ul>
 
@@ -47,10 +42,40 @@
     <section class="hero">
         <div class="container grid grid-2">
             <div class="hero__detail">
-                    I am the description
+                <h1>More than just shorter links</h1>
+                <p>Build your brand’s recognition and get detailed insights 
+                    on how your links are performing.</p>
+                <a href="#" class="btn btn--cyan">Get Started</a>
             </div>
             <div class="hero__image">
-                I am the grid image
+                <img src="./images/illustration-working.svg" alt="Workaholic">
+            </div>
+        </div>
+        <div class="search-box container">
+            <div class="grid grid-2">
+                <div class="search">
+                    <input type="url" placeholder="Shorten a link here..." name="url" id="url">
+                </div>
+                <btn-wrap>
+                    <a href="#" class="btn btn--cyan">Shorten It!</a>
+                </btn-wrap>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced statistics -->
+    <section class="statistics">
+        <div class="container">
+            <div class="adv text-center">
+                <h2>Advanced Statistics</h2>
+                <p>Track how your links are performing across the web with our 
+                    advanced statistics dashboard.</p>
+            </div>
+
+            <div class="grid grid-3 card-wrapper">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
             </div>
         </div>
     </section>
