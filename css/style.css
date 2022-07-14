@@ -60,6 +60,13 @@ h1{
     gap: 2em;
 }
 
+.grid-5{
+    grid-template-columns: 1fr repeat(3, minmax(250px, .8fr)) 1fr;
+    gap: 1em;
+    
+    align-items: flex-start;
+}
+
 .btn{
     border-radius: 1.2em;
     padding: .3em .8em;
@@ -194,8 +201,8 @@ header{
 }
 
 .adv{
-    padding: 13em 0;
-}
+    padding: 13em 0 5em;
+} 
 
 .adv p{
     max-width: 600px;
@@ -206,10 +213,42 @@ header{
     padding-bottom: 8em;
 }
 .card{
-    height: 200px;
     width: 100%;
     background-color: var(--white);
-    border-radius: .8em;
+    border-radius: .4em;
+    position: relative;
+    padding: 1.5em;
+}
+
+.card > h3{
+    margin: 1.5em 0;
+}
+
+.card > p{
+    font-size: .7rem
+}
+
+.circle{
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    background-color: var(--dark-violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 2em;
+    top: -2em;
+}
+
+.card:nth-child(1)::after, .card:nth-child(2)::before{
+    content:"";
+    position: absolute;
+    height: .7em;
+    width: 100%;
+    background: var(--cyan);
+    top: 50%;
+    left:100%;
 }
 
 .card:nth-child(2){
@@ -219,3 +258,50 @@ header{
     margin-top: 8em;
 }
 
+/* Boost section */
+.boost{
+    background-color: var(--dark-violet);
+    background-image: url('../images/bg-boost-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 3em 0;
+}
+
+.boost > h2{
+    color: var(--white);
+    margin-bottom: 1em;
+}
+
+
+/* Footer area */
+footer{
+    padding: 3em 0;
+    background-color: var(--very-dark-blue);
+}
+
+.social ul{
+    display:flex;
+    gap: 0.8em;
+}
+
+footer h4{
+    margin-bottom: .8em;
+    font-weight: var( --medium-weight);
+}
+
+footer  a{
+    font-size: .8rem;
+}
+
+footer  a:hover{
+    color: var(--cyan);
+}
+
+.icon{
+    fill: var(--white);
+}
+
+.icon:hover{
+    fill: var(--cyan);
+}
