@@ -154,6 +154,7 @@ header{
     position: relative;
     
 }
+
 .hero__detail > h1{
     line-height: 1.2;
 }
@@ -166,9 +167,10 @@ header{
 
 .search-box{
     position: absolute;
-    bottom: -100px ;
-    height: 200px;
+    bottom: -4em ;
+    height: 8em;
     left:50%;
+    padding: 2em;
     transform: translateX(-50%);
     background-color: var(--dark-violet);
     border-radius: .5em;
