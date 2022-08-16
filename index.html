@@ -57,7 +57,7 @@
                     <input type="url" placeholder="Shorten a link here..." name="url" id="url">
                 </div>
                 <div class="btn-wrap">
-                    <a href="#" class="btn btn--cyan">Shorten It!</a>
+                    <a  id="btn" onclick="submitListener()" class="btn btn--cyan">Shorten It!</a>
                 </div>
             </div>
         </div>
@@ -66,8 +66,10 @@
     <!-- Advanced statistics -->
     <section class="statistics">
         <div class="container">
+            
             <div class="adv text-center">
                 <h2>Advanced Statistics</h2>
+                <div id="result"></div>
                 <p>Track how your links are performing across the web with our 
                     advanced statistics dashboard.</p>
             </div>
@@ -164,5 +166,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
