@@ -20,7 +20,7 @@
                 <img src="./images/logo.svg" alt="">
             </a>
 
-            <div class="nav__menu">
+            <div id="nav__menu" class="nav__menu">
                 <ul class="nav__menu-list flex">
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Pricing</a></li>
@@ -31,9 +31,10 @@
 
                 </ul>
 
-                <div class="toggle_menu">
-                    <i class='bx bx-menu'></i>
-                </div>
+                
+            </div>
+            <div class="toggle_menu" onclick="openMenu()">
+                <i class='bx bx-menu'></i>
             </div>
         </nav>
     </header>
@@ -65,11 +66,11 @@
 
     <!-- Advanced statistics -->
     <section class="statistics">
-        <div class="container">
-            
+        <div id="result" class="result container"></div>
+        <div class="container"> 
             <div class="adv text-center">
                 <h2>Advanced Statistics</h2>
-                <div id="result"></div>
+               
                 <p>Track how your links are performing across the web with our 
                     advanced statistics dashboard.</p>
             </div>
@@ -166,7 +167,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="./js/menu.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
